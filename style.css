@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    height: 130vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+    background: linear-gradient(180deg, #fff, rgb(175, 224, 255) 77%);
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 1%;
+}
+
+.head .title {
+    font-size: 210%;
+    font-weight: 900;
+}
+
+.head p {
+    font-weight: 700;
+    font-size: 120%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    gap: 0.3%;
+    width: 60%;
+}
+
+.form #cityInp {
+    width: 50%;
+    outline: darkblue;
+    border: 1px solid #27272727;
+    border-radius: 6px;
+    padding: 0.8% 3%;
+    margin: auto;
+    background-color: whitesmoke;
+}
+
+.form #cityInp:focus {
+    border: 3px solid rgb(175, 224, 255);
+    transition: 0.1s;
+}
+
+.form button {
+    outline: none;
+    padding: 1%;
+    font-size: 100%;
+    background-color: darkblue;
+    color: #fff;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 50%;
+    border: none;
+    margin-top: 1%;
+}
+
+.form button:hover {
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1%;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    padding: 1%;
+    border-radius: 7px;
+    margin-bottom: 8%;
+}
+
+.body .location-info,
+.body .error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+
+.body .location-info .city-name {
+    font-size: 150%;
+    font-weight: 900;
+}
+
+
+.body .location-info .region-name {
+    font-size: 130%;
+    font-weight: 800;
+}
+
+
+.body .location-info .country-name {
+    font-size: 110%;
+    font-weight: 700;
+}
+
+
+.body .date {
+    font-size: 110%;
+    font-weight: 700;
+}
+
+.body .weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5%;
+}
+
+.body .weather-info .weather-condition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 133%;
+    margin-left: 15%;
+    font-weight: 700;
+}
+
+.body .weather-info .weather-temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    font-size: 133%;
+    margin-left: 15%;
+    font-weight: 700;
+}
+
+.body .weather-info .weather-temp span {
+    font-size: 40%;
+    margin-top: -31%;
+}
+
+.body .weather-info img {
+    width: 26%;
+    height: 26%;
+    object-fit: cover;
+    margin-left: 20%;
+}
+
+.body .error {
+    background-color: rgb(255, 255, 255);
+    padding: 8%;
+    border-radius: 6px;
+    margin: auto;
+    margin-left: 20%;
+    width: 160%;
+}
+
+.body .empty {
+    padding: 8%;
+    border-radius: 6px;
+    margin: auto;
+    margin-left: 20%;
+    width: 160%;
+}
+
+.body .error .error-title {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: crimson;
+}
+
+.body .empty .empty-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #000;
+}
+
+
+.body .error ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.4%;
+}
+
+
+.body .error ul li {
+    font-weight: 700;
+    color: crimson;
+}
+
+
+.Loading {
+    color: rgb(0, 58, 94);
+    padding: 5%;
+    background-color: rgb(192, 231, 255);
+    border-radius: 6px;
+    margin: auto;
+    margin-top: 10%;
+    margin-left: 20%;
+    width: 160%;
+}
+
+
+footer {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    width: 100%;
+    background-color: lightskyblue;
+    color: #000;
+    padding: 1.5%;
+    padding-top: 3%;
+}
+
+
+footer .footer-left,
+footer .footer-mid,
+footer .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+footer p,
+footer a {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+
+footer .footer-left .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100%;
+}
+
+footer .footer-left .fa {
+    padding: 70%;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+footer .footer-left .fa:hover {
+    opacity: 0.7;
+}
+
+footer .footer-left .fa-facebook {
+    padding: 120%;
+    background: #3B5998;
+    color: white;
+}
+
+footer .footer-left .fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+footer a {
+    color: rgb(0, 98, 255);
+}
+
+footer a:hover {
+    color: indigo;
+    transition: 0.2s;
+}
+footer a:active {
+    color: indigo;
+}
+
+.offline-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+    width: 70%;
+    border: 1.4px solid #27272727;
+    background-color: #7f7f7f27;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 6px;
+    flex-direction: column;
+    color: grey;
+}
+
+.offline-text h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.offline-text ul {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1%;
+}
+
+.offline-text ul li {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.offline-text button {
+    outline: none;
+    padding: 4%;
+    font-size: 100%;
+    background-color: #c7c7c727;
+    color: grey;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 50%;
+    margin-top: 1%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid grey;
+    margin-top: 3%;
+    margin-left: -1.2%;
+}
+
+.offline-text button:hover {
+    transform: scale(1.017);
+    background-color: gray;
+    color: #fff;
+    border: none;
+    transition: 0.3s;
+}
