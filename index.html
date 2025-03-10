@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -7,43 +7,23 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
-    <title>Weather Forecast</title>
+    <title>نشرة جوية</title>
 </head>
 
 <body>
 
     <div class="head">
-        <header class="title">Weather Forecast</header>
-        <p>Here you can see weather of the city you require.</p>
+        <header class="title">النشرة الجوية</header>
+        <p>برنامج بسيط لمعرفة حالة الطقس في جميع أنحاء العالم.</p>
+        <p style="font-size: 22px;">أدخل اسم المدينة أو المنطقة التي تريد معرفة حالة الطقس لها.</p>
+        <p>إذا لم يتم التعرف على اسم المدينة أو المنطقة قم بإدخالها باللغة الإنجليزية.</p>
     </div>
 
-    <div class="form">
-        <input type="text" id="cityInp" onkeyup="getFeatures(this.value)" placeholder="Enter the city/country name">
-    </div>
+    <input type="text" id="cityInp" onkeyup="getFeatures(this.value)" placeholder="اسم المدينة أو المنطقة">
 
     <div class="body">
-        
-    </div>
 
-    <footer>
-        <div class="footer-left">
-            <p>+249 902854949</p>
-            <div class="social">
-                <p><a href="https://web.facebook.com/aiman.dabora?_rdc=1&_rdr" class="fa fa-facebook"></a></p>
-                <p><a href="https://www.instagram.com/ayman_alsisi/" class="fa fa-instagram"></a></p>
-            </div>
-            <p>aimandabora167@gmail.com</p>
-        </div>
-        <div class="footer-mid">
-            <p>Data provided by</p>
-            <a href="https://www.weatherapi.com/">www.weatherapi.com/</a>
-        </div>
-        <div class="footer-right">
-            <p>Developer :</p>
-            <p>Ayman Abdelaziz Elias Babekir</p>
-            <p>Front-end web develper</p>
-        </div>
-    </footer>
+    </div>
 
     <script src="./main.js"></script>
 </body>
