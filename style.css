@@ -39,12 +39,43 @@ body {
     font-weight: 900;
 }
 
+.input {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
 input {
     width: 80%;
     border: 1px solid #dcdcdc;
     outline: none;
     padding: 3px 6px;
     border-radius: 4px;
+    font-size: 17px;
+    transition: all 0.3s ease-in-out;
+}
+
+button {
+    width: 20%;
+    background-color: #00cb40;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+input:focus {
+    border: 1px solid #00cb40;
+    box-shadow: 2px 2px 2px #9fe8b6;
 }
 
 .body {
