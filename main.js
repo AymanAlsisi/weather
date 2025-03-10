@@ -1,10 +1,9 @@
 const cityName = document.querySelector('#cityInp')
-cityName.onkeydown = () => {
-    document.querySelector(".body").innerHTML = `<div class="spiner"></div>`
-}
+const btn = document.querySelector('button')
 
 
 const getFeatures = (city) => {
+    document.querySelector(".body").innerHTML = `<div class="spiner"></div>`
     if (city === "") {
         document.querySelector(".body").innerHTML =
             `<div class="empty">
@@ -13,7 +12,6 @@ const getFeatures = (city) => {
     } else {
         axios.get(`https://api.weatherapi.com/v1/current.json?key=f476f20e1f3f4638922212134242703&q=${city}&aqi=yes`)
             .then(res => {
-                console.log(res.data)
                 document.querySelector(".body").innerHTML =
                     `       <div class="location-info">
                                     <div class="names">
@@ -31,8 +29,9 @@ const getFeatures = (city) => {
                                 <span class="wind">سرعة الرياح ${res.data.current.wind_kph} كم/س</span>
                                 <span class="humidity">درجة الرطوبة ${res.data.current.humidity}%</span>
                             </div>`
-            }).catch(rej => {
-                console.log(rej)
+            })
+            .catch(error => {
+                console.log(error)
                 document.querySelector(".body").innerHTML =
                     `<div class="error">
                         <i class="fa fa-warning"></i>
@@ -43,9 +42,5 @@ const getFeatures = (city) => {
     }
 }
 
-setInterval(() => { document.querySelector('.Loading').innerHTML += '.' }, 400)
-setInterval(() => { document.querySelector('.Loading').innerHTML = 'Please wait' }, 1500)
 
-
-
-getFeatures("")
+btn.addEventListener('click', () => getFeatures(cityName.value))
